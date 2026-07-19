@@ -282,7 +282,7 @@ const translations: Translations = {
   formParentName: { en: "Parent's full name", id: 'Nama lengkap orang tua', ms: 'Nama penuh ibu bapa', ja: '保護者氏名' },
   formParentPlaceholder: { en: 'e.g. Ahmad Abdullah', id: 'contoh: Ahmad Abdullah', ms: 'contoh: Ahmad Abdullah', ja: '例: 山田 太郎' },
   formPhone: { en: 'WhatsApp number', id: 'Nomor WhatsApp', ms: 'Nombor WhatsApp', ja: 'WhatsApp番号' },
-  formPhonePlaceholder: { en: '08xx xxxx xxxx', id: '08xx xxxx xxxx', ms: '08xx xxxx xxxx', ja: '08xx xxxx xxxx' },
+  formPhonePlaceholder: { en: '+62 xxx xxxx xxxx', id: '+62 xxx xxxx xxxx', ms: '+62 xxx xxxx xxxx', ja: '+62 xxx xxxx xxxx' },
   formStudentName: { en: 'Student name', id: 'Nama calon santri', ms: 'Nama calon pelajar', ja: '生徒氏名' },
   formStudentPlaceholder: { en: "Child's full name", id: 'Nama lengkap anak', ms: 'Nama penuh anak', ja: 'お子様のフルネーム' },
   formAge: { en: 'Age', id: 'Usia', ms: 'Umur', ja: '年齢' },
