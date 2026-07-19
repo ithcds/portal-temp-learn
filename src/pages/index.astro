@@ -1,0 +1,531 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="Pondok Pesantren Al Usmani | Penerimaan Santri 2026/2027"
+  description="Penerimaan santri Pondok Pesantren Baitul Ulum Wal Huffadz Al Usmani di Ciledug, Tangerang. Program Tahfidz, Diniyyah, TPQ, bahasa, dan pembentukan adab."
+>
+  <main>
+    <!-- ═══ HEADER ═══ -->
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#home" aria-label="Al Usmani, halaman utama">
+        <img class="brand-logo" src="/images/logo.jpeg" alt="Logo Al Usmani" />
+        <span class="brand-text">
+          <strong>AL USMANI</strong>
+          <small>Baitul 'Ulum Wal Huffadz</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#program">Program</a>
+        <a href="#kehidupan">Kehidupan Santri</a>
+        <a href="#lokasi">Lokasi</a>
+        <a class="nav-cta" href="#daftar">Daftar Sekarang →</a>
+      </nav>
+      <button class="menu-button" id="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+      </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <button class="mobile-menu-close" id="menu-close" aria-label="Tutup menu">✕</button>
+      <a href="#tentang">Tentang</a>
+      <a href="#program">Program</a>
+      <a href="#kehidupan">Kehidupan Santri</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="#daftar">Daftar Sekarang</a>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/></svg>
+          Penerimaan Santri 2026/2027 Dibuka
+        </div>
+        <h1>Tumbuh dalam ilmu.<br /><em>Berakar dalam adab.</em></h1>
+        <p class="hero-lead">
+          Mendampingi putra-putri menjadi generasi Qur'ani yang berilmu, percaya
+          diri, dan siap membawa manfaat bagi umat.
+        </p>
+        <div class="hero-actions">
+          <a class="button-primary" href="#daftar">
+            Mulai Pendaftaran
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a class="text-link" href="#program">
+            Jelajahi program
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <p>
+            <strong>Muqim atau pulang-pergi</strong><br />
+            Pilihan belajar sesuai kebutuhan keluarga
+          </p>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-image-wrap">
+          <img src="/images/logo.jpeg" alt="Logo Pondok Pesantren Al Usmani" />
+        </div>
+        <div class="arabic-orbit" aria-hidden="true">العلم نور</div>
+        <div class="hero-note">
+          <span>Sejak langkah pertama</span>
+          <strong>Menjadi rumah untuk belajar &amp; bertumbuh</strong>
+        </div>
+      </div>
+      <div class="hero-side-note" aria-hidden="true">Ciledug · Tangerang · Banten</div>
+    </section>
+
+    <!-- ═══ MARQUEE ═══ -->
+    <section class="marquee-strip" aria-label="Nilai utama Al Usmani">
+      <div>
+        <span>ILMU</span><i>✦</i>
+        <span>ADAB</span><i>✦</i>
+        <span>AL-QUR'AN</span><i>✦</i>
+        <span>ISTIQAMAH</span><i>✦</i>
+        <span>KEBERANIAN</span><i>✦</i>
+        <span>MANFAAT</span><i>✦</i>
+        <span>ILMU</span><i>✦</i>
+        <span>ADAB</span><i>✦</i>
+        <span>AL-QUR'AN</span><i>✦</i>
+        <span>ISTIQAMAH</span><i>✦</i>
+        <span>KEBERANIAN</span><i>✦</i>
+        <span>MANFAAT</span><i>✦</i>
+        <span>ILMU</span><i>✦</i>
+        <span>ADAB</span><i>✦</i>
+        <span>AL-QUR'AN</span><i>✦</i>
+        <span>ISTIQAMAH</span><i>✦</i>
+        <span>KEBERANIAN</span><i>✦</i>
+        <span>MANFAAT</span><i>✦</i>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section class="intro section" id="tentang">
+      <div class="section-label">01 / Tentang Kami</div>
+      <div class="intro-grid">
+        <div class="reveal">
+          <p class="kicker">Pendidikan yang menyentuh akal dan hati</p>
+          <h2>Bukan sekadar menghafal, tetapi <em>menjadi.</em></h2>
+        </div>
+        <div class="intro-body reveal">
+          <p>
+            Pondok Pesantren Baitul 'Ulum Wal Huffadz Al Usmani menghadirkan
+            lingkungan belajar yang memadukan Al-Qur'an, ilmu agama, bahasa,
+            keterampilan, dan pembentukan karakter.
+          </p>
+          <p>
+            Setiap santri didampingi untuk memahami ilmu, mengamalkannya dalam
+            keseharian, lalu berani menyampaikannya dengan santun dan penuh
+            percaya diri.
+          </p>
+          <a class="text-link dark" href="#kehidupan">
+            Lihat keseharian santri
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="intro-quote reveal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+        <p>"Menuntut ilmu adalah jalan menuju kemuliaan dunia dan akhirat."</p>
+      </div>
+    </section>
+
+    <!-- ═══ PROGRAMS ═══ -->
+    <section class="program-section section" id="program">
+      <div class="section-heading">
+        <div>
+          <div class="section-label light">02 / Program Pendidikan</div>
+          <p class="kicker light">Jalan belajar yang utuh</p>
+          <h2>Bekal untuk hari ini.<br /><em>Cahaya untuk nanti.</em></h2>
+        </div>
+        <p>
+          Kurikulum dirancang untuk menyeimbangkan kedalaman ilmu, kebiasaan
+          baik, kecakapan bahasa, dan keberanian tampil.
+        </p>
+      </div>
+      <div class="program-grid">
+        <article class="program-card reveal">
+          <span class="program-number">01</span>
+          <svg class="program-icon" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+          <h3>Tahfidz Al-Qur'an</h3>
+          <p>
+            Membangun kedekatan dengan Al-Qur'an melalui hafalan, tahsin, tajwid,
+            dan pembiasaan ibadah yang istiqamah.
+          </p>
+          <a href="#daftar" aria-label="Daftar untuk program Tahfidz Al-Qur'an">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+        <article class="program-card reveal">
+          <span class="program-number">02</span>
+          <svg class="program-icon" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 5h4"/><path d="M20 3v4"/><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+          <h3>Diniyyah 'Alim</h3>
+          <p>
+            Pendalaman aqidah, fiqih, hadits, sejarah, adab, serta Nahwu Shorof
+            untuk santri putri usia 13 tahun ke atas.
+          </p>
+          <a href="#daftar" aria-label="Daftar untuk program Diniyyah 'Alim">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+        <article class="program-card reveal">
+          <span class="program-number">03</span>
+          <svg class="program-icon" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+          <h3>Bahasa &amp; Percaya Diri</h3>
+          <p>
+            Bahasa Arab, Bahasa Inggris, muhadharah, presentasi, dan pengalaman
+            mengajar untuk menumbuhkan keberanian.
+          </p>
+          <a href="#daftar" aria-label="Daftar untuk program Bahasa & Percaya Diri">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+      </div>
+      <div class="curriculum-row reveal">
+        <span>Yang dipelajari</span>
+        <div>
+          <span>Tahfidz &amp; Tahsin</span>
+          <span>Kitab Kuning</span>
+          <span>Fiqih &amp; Hadits</span>
+          <span>Aqidah &amp; Akhlak</span>
+          <span>Bahasa Arab</span>
+          <span>Bahasa Inggris</span>
+          <span>Nahwu Shorof</span>
+          <span>Muhadharah</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ JOURNEY ═══ -->
+    <section class="journey section">
+      <div class="section-label">03 / Perjalanan Santri</div>
+      <div class="journey-grid">
+        <div class="journey-image reveal">
+          <img src="/images/logo.jpeg" alt="Kegiatan belajar di Al Usmani" />
+          <span class="image-caption">Belajar dengan tekun, bertumbuh dengan gembira.</span>
+        </div>
+        <div class="journey-copy reveal">
+          <p class="kicker">Didampingi di setiap proses</p>
+          <h2>Ritme yang membentuk <em>kebiasaan baik.</em></h2>
+          <div class="journey-list">
+            <div>
+              <span>1</span>
+              <p>
+                <strong>Kenali potensi</strong>
+                Setiap anak datang dengan cerita, kemampuan, dan ritme belajar
+                yang berbeda.
+              </p>
+            </div>
+            <div>
+              <span>2</span>
+              <p>
+                <strong>Bangun kebiasaan</strong>
+                Ibadah, belajar, disiplin, dan adab dilatih dalam keseharian yang
+                terarah.
+              </p>
+            </div>
+            <div>
+              <span>3</span>
+              <p>
+                <strong>Berani bermanfaat</strong>
+                Santri dilatih tampil, berbicara, mengajar, dan hadir untuk
+                lingkungannya.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GALLERY ═══ -->
+    <section class="gallery-section section" id="kehidupan">
+      <div class="gallery-heading">
+        <div>
+          <div class="section-label">04 / Kehidupan Santri</div>
+          <p class="kicker">Hari-hari yang penuh makna</p>
+          <h2>Belajar. Bertumbuh.<br /><em>Bersama.</em></h2>
+        </div>
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/ponpes_al_usmani/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          Ikuti @ponpes_al_usmani
+        </a>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-tall reveal">
+          <img src="https://scontent-dfw5-1.cdninstagram.com/v/t51.71878-15/732036085_1790499149027562_3608150774802194544_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-dfw5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gFHpQuo2SEHU8QUUeOeKJkwntkxtp1wF0cXJ4FNyp6i24syKqYuPoQQhmzOdue87_U&_nc_ohc=xudrmlhd11sQ7kNvwHitXAt&_nc_gid=XLX9u3BzCBbSFQ_X1wLxYA&edm=ADp7STQBAAAA&ccb=7-5&oh=00_AQCcadphhnsGiEoMg7-OUPaGdVsOCrhPdsFiH2pDH6TDXw&oe=6A614196&_nc_sid=c6f216" alt="Kebersamaan yang menguatkan" loading="lazy" />
+          <figcaption>Kebersamaan yang menguatkan</figcaption>
+        </figure>
+        <figure class="gallery-square reveal">
+          <img src="https://instagram.fdsm1-1.fna.fbcdn.net/v/t51.82787-15/721387574_17917864092393414_1362100675702291111_n.webp?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=instagram.fdsm1-1.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2gGxe1R8jdhLbp5zgYoxQ1Oh62tQQBvxp3tjZIqRDM8KDGkXcOKo7q9gbdBEgzKWxCw&_nc_ohc=1SRkgoEA_NMQ7kNvwER_1xZ&_nc_gid=WJKABH0_xPRzyR7bcIBjAA&edm=ADp7STQBAAAA&ccb=7-5&oh=00_AQByv-yKgpRvYk1QOyaL4tUVcXe2VMbLhmte-DJfz9J3Pg&oe=6A612F90&_nc_sid=c6f216" alt="Kegiatan santri" loading="lazy" />
+          <figcaption>Tumbuh melalui proses</figcaption>
+        </figure>
+        <figure class="gallery-square reveal">
+          <img src="https://scontent-dfw5-1.cdninstagram.com/v/t51.82787-15/736260948_17921258313393414_619150200593683683_n.webp?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-dfw5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gHSiBKRtLqnjyECh7UPTipsqhDwXTutfiAfN_bhJWfwQczODDlOAmm88KQ234xZE-E&_nc_ohc=kYQiXUuQtfgQ7kNvwHsHOOG&_nc_gid=TIkbK0JiI3yZiiPFOUZW_g&edm=ADp7STQBAAAA&ccb=7-5&oh=00_AQC-X9GlrAH7StyRmmM8JIjJ0c5dPsSWBadXWhAAeZTOQw&oe=6A6136BD&_nc_sid=c6f216" alt="Santri baru bergabung" loading="lazy" />
+          <figcaption>Bergabung bersama Al Usmani</figcaption>
+        </figure>
+        <figure class="gallery-wide reveal">
+          <img src="https://scontent-phx1-1.cdninstagram.com/v/t51.82787-15/740733807_17921231586393414_8277688544224068019_n.webp?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-phx1-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gF6iZ-iG7qeSlEu_nT-ppP6jZLCjLmXc9VhT6pS8ju_vle1Ngtb-MGtePhUM933kAw&_nc_ohc=RWDR67suFLsQ7kNvwHpMNLr&_nc_gid=Fi5wKiQMNs5bSHc0evFJcA&edm=ADp7STQBAAAA&ccb=7-5&oh=00_AQDDHLg5Cz8PgeFQUhZuvz8F2Vz_sxUQpSnexYM8f1N5MQ&oe=6A612CE7&_nc_sid=c6f216" alt="Berani tampil dan berkarya" loading="lazy" />
+          <figcaption>Berani tampil dan berkarya</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══ LOCATION ═══ -->
+    <section class="location-section section" id="lokasi">
+      <div class="location-card">
+        <div class="location-copy">
+          <div class="section-label light">05 / Lokasi</div>
+          <p class="kicker light">Dekat dari rumah, hangat seperti rumah</p>
+          <h2>Temukan kami<br />di <em>Ciledug.</em></h2>
+          <div class="address-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>
+              <strong>Yayasan Baitul Ulum Wal Huffadz Al Usmani</strong>
+              Jl. Wiru Indah I, Parung Serab, Ciledug, Kota Tangerang, Banten
+            </p>
+          </div>
+          <a
+            class="button-light"
+            href="https://maps.app.goo.gl/2SPWoviGf1VFaN6f9"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Buka Google Maps
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            title="Lokasi Pondok Pesantren Al Usmani"
+            src="https://www.google.com/maps?q=-6.2504014,106.699155&z=17&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="map-pin-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 5h4"/><path d="M20 3v4"/><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+            Al Usmani
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ REGISTRATION ═══ -->
+    <section class="admission-section section" id="daftar">
+      <div class="admission-intro reveal">
+        <div class="section-label">06 / Pendaftaran</div>
+        <p class="kicker">Awali langkah baik hari ini</p>
+        <h2>Mari bertumbuh<br /><em>bersama Al Usmani.</em></h2>
+        <p>
+          Ceritakan kebutuhan putra-putri Anda. Tim penerimaan menghubungi
+          kembali untuk konsultasi program, jadwal kunjungan, dan langkah
+          selanjutnya.
+        </p>
+        <div class="admission-points">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span><strong>Konsultasi awal</strong> tanpa biaya</span>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+            <span>Pilihan <strong>muqim atau pulang-pergi</strong></span>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+            <span>Pendampingan sejak <strong>proses pendaftaran</strong></span>
+          </div>
+        </div>
+        <a
+          class="whatsapp-inline"
+          href="https://wa.me/6281779055909"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          Atau hubungi WhatsApp 0817 7905 5909
+        </a>
+      </div>
+      <div class="form-card reveal">
+        <form name="penerimaan-santri" id="registration-form">
+          <input type="hidden" name="form-name" value="penerimaan-santri" />
+          <p class="honeypot">
+            <label>Jangan isi bagian ini: <input name="bot-field" /></label>
+          </p>
+          <div class="form-heading">
+            <span>Form minat pendaftaran</span>
+            <strong>± 2 menit</strong>
+          </div>
+          <label>
+            Nama orang tua / wali
+            <input type="text" placeholder="Contoh: Bapak Ahmad" required name="parentName" />
+          </label>
+          <label>
+            Nomor WhatsApp
+            <input type="tel" inputmode="tel" placeholder="08xx xxxx xxxx" required name="phone" />
+          </label>
+          <div class="form-row">
+            <label>
+              Nama calon santri
+              <input type="text" placeholder="Nama lengkap" required name="studentName" />
+            </label>
+            <label>
+              Usia
+              <input type="number" min="4" max="30" placeholder="Tahun" required name="age" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Program diminati
+              <select name="program" required>
+                <option value="" disabled selected>Pilih program</option>
+                <option>Tahfidz Al-Qur'an</option>
+                <option>Diniyyah 'Alim Putri</option>
+                <option>TPQ Al Usmani</option>
+                <option>Belum yakin, ingin konsultasi</option>
+              </select>
+            </label>
+            <label>
+              Sistem belajar
+              <select name="attendance" required>
+                <option value="" disabled selected>Pilih sistem</option>
+                <option>Muqim</option>
+                <option>Pulang-pergi</option>
+                <option>Ingin konsultasi</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Yang ingin ditanyakan <span class="optional">(opsional)</span>
+            <textarea name="notes" rows="3" placeholder="Biaya, jadwal, fasilitas, atau kebutuhan khusus..."></textarea>
+          </label>
+          <button class="button-primary form-submit" type="submit">
+            Kirim Minat Pendaftaran
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <p class="form-privacy">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            Data hanya digunakan untuk proses penerimaan santri.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+      <div class="footer-brand">
+        <span class="brand-mark">
+          <img src="/images/logo.jpeg" alt="Logo Al Usmani" />
+        </span>
+        <div>
+          <strong>AL USMANI</strong>
+          <small>Baitul 'Ulum Wal Huffadz</small>
+        </div>
+      </div>
+      <p>Mendidik dengan ilmu, membersamai dengan adab.</p>
+      <div class="footer-links">
+        <a href="tel:+6281779055909">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+          0817 7905 5909
+        </a>
+        <a href="https://www.instagram.com/ponpes_al_usmani/" target="_blank" rel="noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          Instagram
+        </a>
+        <a href="#lokasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+          Ciledug, Tangerang
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Yayasan Baitul Ulum Wal Huffadz Al Usmani</span>
+        <a href="#home">Kembali ke atas ↑</a>
+      </div>
+    </footer>
+
+    <!-- ═══ FLOATING WHATSAPP ═══ -->
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/6281779055909"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Hubungi Al Usmani melalui WhatsApp"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+      <span>Tanya Admin</span>
+    </a>
+  </main>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", () => {
+      header?.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuClose = document.getElementById("menu-close");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle?.addEventListener("click", () => {
+      mobileMenu?.classList.add("open");
+    });
+
+    menuClose?.addEventListener("click", () => {
+      mobileMenu?.classList.remove("open");
+    });
+
+    mobileMenu?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu?.classList.remove("open");
+      });
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    reveals.forEach((el) => observer.observe(el));
+
+    // Form handler
+    const form = document.getElementById("registration-form") as HTMLFormElement;
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = data.get("parentName");
+      const phone = data.get("phone");
+      const student = data.get("studentName");
+      const age = data.get("age");
+      const program = data.get("program");
+      const attendance = data.get("attendance");
+      const notes = data.get("notes");
+
+      const message = `Assalamu'alaikum, saya ingin mendaftarkan anak saya:\n\nNama Ortu: ${name}\nNo. WA: ${phone}\nNama Santri: ${student}\nUsia: ${age} tahun\nProgram: ${program}\nSistem: ${attendance}${notes ? `\nCatatan: ${notes}` : ""}`;
+
+      window.open(
+        `https://wa.me/6281779055909?text=${encodeURIComponent(message)}`,
+        "_blank"
+      );
+    });
+  </script>
+</Layout>
