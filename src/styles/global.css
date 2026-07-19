@@ -1142,6 +1142,41 @@ button {
    ADMISSION / REGISTRATION
    ═══════════════════════════════════════════ */
 
+.registration-section {
+  background: var(--bg-primary);
+}
+
+.reg-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.reg-heading h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.reg-heading h2 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.reg-heading .kicker {
+  margin-bottom: 0.5rem;
+}
+
+.reg-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
 .admission-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1211,7 +1246,8 @@ button {
 }
 
 /* Form */
-.form-card {
+.form-card,
+.reg-form {
   background: var(--bg-card);
   border: 1px solid rgba(201, 168, 76, 0.12);
   border-radius: var(--radius-lg);
@@ -1238,7 +1274,8 @@ button {
   font-weight: 500;
 }
 
-.form-card label {
+.form-card label,
+.reg-form label {
   display: block;
   font-size: 0.82rem;
   font-weight: 500;
@@ -1248,7 +1285,10 @@ button {
 
 .form-card input,
 .form-card select,
-.form-card textarea {
+.form-card textarea,
+.reg-form input,
+.reg-form select,
+.reg-form textarea {
   display: block;
   width: 100%;
   padding: 0.7rem 1rem;
@@ -1264,13 +1304,17 @@ button {
 
 .form-card input:focus,
 .form-card select:focus,
-.form-card textarea:focus {
+.form-card textarea:focus,
+.reg-form input:focus,
+.reg-form select:focus,
+.reg-form textarea:focus {
   outline: none;
   border-color: var(--gold);
   box-shadow: 0 0 0 3px var(--gold-muted);
 }
 
-.form-card select {
+.form-card select,
+.reg-form select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23c9a84c' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -1509,7 +1553,8 @@ footer > p {
   .intro-grid,
   .section-heading,
   .journey-grid,
-  .admission-section {
+  .admission-section,
+  .reg-container {
     grid-template-columns: 1fr;
   }
 
