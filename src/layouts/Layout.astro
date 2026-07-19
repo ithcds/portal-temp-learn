@@ -10,7 +10,7 @@ interface Props {
 const siteUrl = "https://baitululum-alusmani.com";
 const { title, description, lang = 'en' } = Astro.props;
 
-const ogLocaleMap: Record<Locale, string> = { en: 'en_US', id: 'id_ID', ms: 'ms_MY' };
+const ogLocaleMap: Record<Locale, string> = { en: 'en_US', id: 'id_ID', ms: 'ms_MY', ja: 'ja_JP' };
 const canonicalPath = lang === 'en' ? '' : `/${lang}`;
 
 const jsonLd = {
@@ -26,8 +26,8 @@ const jsonLd = {
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Jl. Wiru Indah I, Parung Serab",
-    "addressLocality": "Ciledug",
-    "addressRegion": "Kota Tangerang, Banten",
+    "addressLocality": "Tangerang",
+    "addressRegion": "Banten",
     "addressCountry": "ID"
   },
   "geo": {
@@ -53,6 +53,7 @@ const jsonLd = {
     <link rel="alternate" hreflang="en" href={`${siteUrl}/`} />
     <link rel="alternate" hreflang="id" href={`${siteUrl}/id/`} />
     <link rel="alternate" hreflang="ms" href={`${siteUrl}/ms/`} />
+    <link rel="alternate" hreflang="ja" href={`${siteUrl}/ja/`} />
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

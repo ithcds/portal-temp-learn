@@ -370,7 +370,7 @@ const { lang } = Astro.props;
       </a>
       <a href={`${getLocalePath(lang)}#lokasi`}>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-        Ciledug, Tangerang
+        Banten, Indonesia
       </a>
     </div>
     <div class="footer-bottom">
@@ -455,11 +455,12 @@ const { lang } = Astro.props;
       en: { intro: "Assalamu'alaikum, I would like to register my child:", parent: "Parent name", phone: "WhatsApp", student: "Student name", age: "Age", program: "Program", mode: "Mode", notes: "Notes" },
       id: { intro: "Assalamu'alaikum, saya ingin mendaftarkan anak saya:", parent: "Nama Ortu", phone: "No. WA", student: "Nama Santri", age: "Usia", program: "Program", mode: "Sistem", notes: "Catatan" },
       ms: { intro: "Assalamu'alaikum, saya ingin mendaftarkan anak saya:", parent: "Nama Ibu Bapa", phone: "No. WA", student: "Nama Pelajar", age: "Umur", program: "Program", mode: "Sistem", notes: "Catatan" },
+      ja: { intro: "アッサラームアライクム、子どもの入学を希望します：", parent: "保護者名", phone: "WhatsApp", student: "生徒名", age: "年齢", program: "プログラム", mode: "形態", notes: "備考" },
     };
 
     const l = labels[lang] || labels['id'];
     const notes = data.get("notes");
-    const message = `${l.intro}\n\n${l.parent}: ${data.get("parentName")}\n${l.phone}: ${data.get("phone")}\n${l.student}: ${data.get("studentName")}\n${l.age}: ${data.get("age")} ${lang === 'en' ? 'years' : 'tahun'}\n${l.program}: ${data.get("program")}\n${l.mode}: ${data.get("attendance")}${notes ? `\n${l.notes}: ${notes}` : ""}`;
+    const message = `${l.intro}\n\n${l.parent}: ${data.get("parentName")}\n${l.phone}: ${data.get("phone")}\n${l.student}: ${data.get("studentName")}\n${l.age}: ${data.get("age")} ${lang === 'en' ? 'years' : lang === 'ja' ? '歳' : 'tahun'}\n${l.program}: ${data.get("program")}\n${l.mode}: ${data.get("attendance")}${notes ? `\n${l.notes}: ${notes}` : ""}`;
 
     window.open(
       `https://wa.me/6281779055909?text=${encodeURIComponent(message)}`,
