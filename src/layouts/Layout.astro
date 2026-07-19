@@ -1,11 +1,17 @@
 ---
+import type { Locale } from '../i18n/translations';
+
 interface Props {
   title: string;
   description: string;
+  lang?: Locale;
 }
 
 const siteUrl = "https://baitululum-alusmani.com";
-const { title, description } = Astro.props;
+const { title, description, lang = 'en' } = Astro.props;
+
+const ogLocaleMap: Record<Locale, string> = { en: 'en_US', id: 'id_ID', ms: 'ms_MY' };
+const canonicalPath = lang === 'en' ? '' : `/${lang}`;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -36,24 +42,28 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="id">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0a0a0a" />
-    <!-- Canonical -->
-    <link rel="canonical" href={siteUrl} />
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href={`${siteUrl}${canonicalPath}/`} />
+    <link rel="alternate" hreflang="en" href={`${siteUrl}/`} />
+    <link rel="alternate" hreflang="id" href={`${siteUrl}/id/`} />
+    <link rel="alternate" hreflang="ms" href={`${siteUrl}/ms/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
+    <meta property="og:url" content={`${siteUrl}${canonicalPath}/`} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={`${siteUrl}/images/og-card.png`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Pondok Pesantren Al Usmani — Tumbuh dalam ilmu. Berakar dalam adab." />
-    <meta property="og:locale" content="id_ID" />
+    <meta property="og:locale" content={ogLocaleMap[lang]} />
     <meta property="og:site_name" content="Pondok Pesantren Al Usmani" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />

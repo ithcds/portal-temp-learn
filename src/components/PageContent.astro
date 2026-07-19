@@ -1,0 +1,469 @@
+---
+import { t, type Locale, locales, getLocalePath } from '../i18n/translations';
+import '../styles/global.css';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+---
+
+<main>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <a class="brand" href={`${getLocalePath(lang)}#home`} aria-label="Al Usmani">
+      <img class="brand-logo" src="/images/logo.jpeg" alt="Logo Al Usmani" />
+      <span class="brand-text">
+        <strong>AL USMANI</strong>
+        <small>Baitul 'Ulum Wal Huffadz</small>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href={`${getLocalePath(lang)}#tentang`}>{t(lang, 'navAbout')}</a>
+      <a href={`${getLocalePath(lang)}#program`}>{t(lang, 'navProgram')}</a>
+      <a href={`${getLocalePath(lang)}#kehidupan`}>{t(lang, 'navLife')}</a>
+      <a href={`${getLocalePath(lang)}#lokasi`}>{t(lang, 'navLocation')}</a>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          {lang.toUpperCase()}
+        </button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          {locales.map((loc) => (
+            <a
+              href={getLocalePath(loc.code)}
+              class:list={['lang-option', { active: loc.code === lang }]}
+            >
+              <span>{loc.flag}</span> {loc.label}
+            </a>
+          ))}
+        </div>
+      </div>
+      <a class="nav-cta" href={`${getLocalePath(lang)}#daftar`}>{t(lang, 'navRegister')}</a>
+    </nav>
+    <button class="menu-button" id="menu-toggle" aria-label={t(lang, 'menuOpen')} aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="menu-close" aria-label={t(lang, 'menuClose')}>✕</button>
+    <a href={`${getLocalePath(lang)}#tentang`}>{t(lang, 'navAbout')}</a>
+    <a href={`${getLocalePath(lang)}#program`}>{t(lang, 'navProgram')}</a>
+    <a href={`${getLocalePath(lang)}#kehidupan`}>{t(lang, 'navLife')}</a>
+    <a href={`${getLocalePath(lang)}#lokasi`}>{t(lang, 'navLocation')}</a>
+    <a href={`${getLocalePath(lang)}#daftar`}>{t(lang, 'navRegister')}</a>
+    <div class="mobile-lang-group">
+      {locales.map((loc) => (
+        <a
+          href={getLocalePath(loc.code)}
+          class:list={['mobile-lang-btn', { active: loc.code === lang }]}
+        >
+          {loc.flag} {loc.label}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/></svg>
+        {t(lang, 'heroBadge')}
+      </div>
+      <h1>{t(lang, 'heroTitle1')}<br /><em>{t(lang, 'heroTitle2')}</em></h1>
+      <p class="hero-lead">{t(lang, 'heroLead')}</p>
+      <div class="hero-actions">
+        <a class="button-primary" href={`${getLocalePath(lang)}#daftar`}>
+          {t(lang, 'heroCtaPrimary')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a class="text-link" href={`${getLocalePath(lang)}#program`}>
+          {t(lang, 'heroCtaSecondary')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust">
+        <p>
+          <strong>{t(lang, 'heroTrustTitle')}</strong><br />
+          {t(lang, 'heroTrustSub')}
+        </p>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-image-wrap">
+        <img src="/images/logo.jpeg" alt="Logo Pondok Pesantren Al Usmani" />
+      </div>
+      <div class="arabic-orbit" aria-hidden="true">العلم نور</div>
+      <div class="hero-note">
+        <span>{t(lang, 'heroNote1')}</span>
+        <strong>{t(lang, 'heroNote2')}</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MARQUEE ═══ -->
+  <section class="marquee-strip" aria-label="Core values">
+    <div>
+      {[1,2,3].map(() => (
+        <>
+          <span>ILMU</span><i>✦</i>
+          <span>ADAB</span><i>✦</i>
+          <span>AL-QUR'AN</span><i>✦</i>
+          <span>ISTIQAMAH</span><i>✦</i>
+          <span>{t(lang, 'marqueeCourage')}</span><i>✦</i>
+          <span>{t(lang, 'marqueeBenefit')}</span><i>✦</i>
+        </>
+      ))}
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="intro section" id="tentang">
+    <div class="section-label">{t(lang, 'aboutLabel')}</div>
+    <div class="intro-grid">
+      <div class="reveal">
+        <p class="kicker">{t(lang, 'aboutKicker')}</p>
+        <h2>{t(lang, 'aboutTitle')} <em>{t(lang, 'aboutTitleEm')}</em></h2>
+      </div>
+      <div class="intro-body reveal">
+        <p>{t(lang, 'aboutBody1')}</p>
+        <p>{t(lang, 'aboutBody2')}</p>
+        <a class="text-link dark" href={`${getLocalePath(lang)}#kehidupan`}>
+          {t(lang, 'aboutLink')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+    <blockquote class="pull-quote reveal">
+      <p>{t(lang, 'aboutQuote')}</p>
+    </blockquote>
+  </section>
+
+  <!-- ═══ PROGRAMS ═══ -->
+  <section class="programs section" id="program">
+    <div class="section-label">{t(lang, 'programLabel')}</div>
+    <p class="kicker">{t(lang, 'programKicker')}</p>
+    <h2>{t(lang, 'programTitle')} <em>{t(lang, 'programTitleEm')}</em></h2>
+    <div class="program-grid">
+      <article class="program-card reveal">
+        <span class="program-number">01</span>
+        <h3>{t(lang, 'prog1Title')}</h3>
+        <p>{t(lang, 'prog1Desc')}</p>
+        <a href={`${getLocalePath(lang)}#daftar`} aria-label={`${t(lang, 'progLink')} ${t(lang, 'prog1Title')}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </article>
+      <article class="program-card reveal">
+        <span class="program-number">02</span>
+        <h3>{t(lang, 'prog2Title')}</h3>
+        <p>{t(lang, 'prog2Desc')}</p>
+        <a href={`${getLocalePath(lang)}#daftar`} aria-label={`${t(lang, 'progLink')} ${t(lang, 'prog2Title')}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </article>
+      <article class="program-card reveal">
+        <span class="program-number">03</span>
+        <h3>{t(lang, 'prog3Title')}</h3>
+        <p>{t(lang, 'prog3Desc')}</p>
+        <a href={`${getLocalePath(lang)}#daftar`} aria-label={`${t(lang, 'progLink')} ${t(lang, 'prog3Title')}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+    <div class="curriculum-row reveal">
+      <span>{t(lang, 'curriculumLabel')}</span>
+      <div>
+        <span>{t(lang, 'currTahfidz')}</span>
+        <span>{t(lang, 'currKitab')}</span>
+        <span>{t(lang, 'currFiqh')}</span>
+        <span>{t(lang, 'currAqidah')}</span>
+        <span>{t(lang, 'currArabic')}</span>
+        <span>{t(lang, 'currEnglish')}</span>
+        <span>{t(lang, 'currNahwu')}</span>
+        <span>{t(lang, 'currMuhadharah')}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ JOURNEY ═══ -->
+  <section class="journey section">
+    <div class="section-label">{t(lang, 'journeyLabel')}</div>
+    <div class="journey-grid">
+      <div class="journey-image reveal">
+        <img src="/images/gallery-5.webp" alt={t(lang, 'journeyCaption')} />
+        <span class="image-caption">{t(lang, 'journeyCaption')}</span>
+      </div>
+      <div class="journey-copy reveal">
+        <p class="kicker">{t(lang, 'journeyKicker')}</p>
+        <h2>{t(lang, 'journeyTitle')} <em>{t(lang, 'journeyTitleEm')}</em></h2>
+        <div class="journey-list">
+          <div>
+            <span>1</span>
+            <p><strong>{t(lang, 'step1Title')}</strong> {t(lang, 'step1Desc')}</p>
+          </div>
+          <div>
+            <span>2</span>
+            <p><strong>{t(lang, 'step2Title')}</strong> {t(lang, 'step2Desc')}</p>
+          </div>
+          <div>
+            <span>3</span>
+            <p><strong>{t(lang, 'step3Title')}</strong> {t(lang, 'step3Desc')}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GALLERY ═══ -->
+  <section class="gallery-section section" id="kehidupan">
+    <div class="gallery-heading">
+      <div>
+        <div class="section-label">{t(lang, 'galleryLabel')}</div>
+        <p class="kicker">{t(lang, 'galleryKicker')}</p>
+        <h2>{t(lang, 'galleryTitle1')}<br /><em>{t(lang, 'galleryTitle2')}</em></h2>
+      </div>
+      <a class="instagram-link" href="https://www.instagram.com/ponpes_al_usmani/" target="_blank" rel="noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        {t(lang, 'galleryFollow')}
+      </a>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-tall reveal">
+        <img src="/images/gallery-7.jpg" alt={t(lang, 'galleryAlt1')} loading="lazy" />
+        <figcaption>{t(lang, 'galleryCaption1')}</figcaption>
+      </figure>
+      <figure class="gallery-square reveal">
+        <img src="/images/gallery-5.webp" alt={t(lang, 'galleryAlt2')} loading="lazy" />
+        <figcaption>{t(lang, 'galleryCaption2')}</figcaption>
+      </figure>
+      <figure class="gallery-square reveal">
+        <img src="/images/gallery-3.webp" alt={t(lang, 'galleryAlt3')} loading="lazy" />
+        <figcaption>{t(lang, 'galleryCaption3')}</figcaption>
+      </figure>
+      <figure class="gallery-wide reveal">
+        <img src="/images/gallery-6.jpg" alt={t(lang, 'galleryAlt4')} loading="lazy" />
+        <figcaption>{t(lang, 'galleryCaption4')}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══ LOCATION ═══ -->
+  <section class="location-section section" id="lokasi">
+    <div class="location-card">
+      <div class="location-copy">
+        <div class="section-label light">{t(lang, 'locationLabel')}</div>
+        <p class="kicker light">{t(lang, 'locationKicker')}</p>
+        <h2>{t(lang, 'locationTitle')}<br />{lang === 'en' ? '' : 'di '}<em>{t(lang, 'locationTitleEm')}</em></h2>
+        <div class="address-block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+          <p>
+            <strong>{t(lang, 'locationOrg')}</strong>
+            {t(lang, 'locationAddress')}
+          </p>
+        </div>
+        <a class="button-light" href="https://maps.app.goo.gl/2SPWoviGf1VFaN6f9" target="_blank" rel="noreferrer">
+          {t(lang, 'locationCta')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          title={t(lang, 'locationOrg')}
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3!2d106.714!3d-6.238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9e6c3a70001%3A0xba40c0f64539a502!2sYayasan%20Baitul%20Ulum%20Wal%20Huffadz%20Al%20Usmani!5e0!3m2!1sid!2sid!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REGISTRATION ═══ -->
+  <section class="registration-section section" id="daftar">
+    <div class="reg-container">
+      <div class="reg-heading">
+        <div class="section-label">{t(lang, 'regLabel')}</div>
+        <p class="kicker">{t(lang, 'regKicker')}</p>
+        <h2>{t(lang, 'regTitle')} <em>{t(lang, 'regTitleEm')}</em></h2>
+        <p class="reg-subtitle">{t(lang, 'regSubtitle')}</p>
+      </div>
+      <form class="reg-form reveal" id="registration-form" data-lang={lang}>
+        <div class="form-row">
+          <label>
+            {t(lang, 'formParentName')}
+            <input type="text" name="parentName" required placeholder={t(lang, 'formParentPlaceholder')} />
+          </label>
+          <label>
+            {t(lang, 'formPhone')}
+            <input type="tel" name="phone" required placeholder={t(lang, 'formPhonePlaceholder')} />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            {t(lang, 'formStudentName')}
+            <input type="text" name="studentName" required placeholder={t(lang, 'formStudentPlaceholder')} />
+          </label>
+          <label class="age-label">
+            {t(lang, 'formAge')}
+            <input type="number" name="age" min="4" max="25" required placeholder="—" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            {t(lang, 'formProgram')}
+            <select name="program" required>
+              <option>{t(lang, 'formProgOpt1')}</option>
+              <option>{t(lang, 'formProgOpt2')}</option>
+              <option>{t(lang, 'formProgOpt3')}</option>
+            </select>
+          </label>
+          <label>
+            {t(lang, 'formAttendance')}
+            <select name="attendance" required>
+              <option>{t(lang, 'formAttOpt1')}</option>
+              <option>{t(lang, 'formAttOpt2')}</option>
+              <option>{t(lang, 'formAttOpt3')}</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          {t(lang, 'formNotes')} <span class="optional">{t(lang, 'formNotesOptional')}</span>
+          <textarea name="notes" rows="3" placeholder={t(lang, 'formNotesPlaceholder')}></textarea>
+        </label>
+        <button class="button-primary form-submit" type="submit">
+          {t(lang, 'formSubmit')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <p class="form-privacy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          {t(lang, 'formPrivacy')}
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-brand">
+      <span class="brand-mark">
+        <img src="/images/logo.jpeg" alt="Logo Al Usmani" />
+      </span>
+      <div>
+        <strong>AL USMANI</strong>
+        <small>Baitul 'Ulum Wal Huffadz</small>
+      </div>
+    </div>
+    <p>{t(lang, 'footerTagline')}</p>
+    <div class="footer-links">
+      <a href="tel:+6281779055909">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+        0817 7905 5909
+      </a>
+      <a href="https://www.instagram.com/ponpes_al_usmani/" target="_blank" rel="noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        Instagram
+      </a>
+      <a href={`${getLocalePath(lang)}#lokasi`}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+        Ciledug, Tangerang
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <span>{t(lang, 'footerCopyright')}</span>
+      <a href={`${getLocalePath(lang)}#home`}>{t(lang, 'footerBackTop')}</a>
+    </div>
+  </footer>
+
+  <!-- ═══ FLOATING WHATSAPP ═══ -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/6281779055909"
+    target="_blank"
+    rel="noreferrer"
+    aria-label={t(lang, 'fabLabel')}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+    <span>{t(lang, 'fabText')}</span>
+  </a>
+</main>
+
+<script>
+  // Header scroll effect
+  const header = document.getElementById("site-header");
+  window.addEventListener("scroll", () => {
+    header?.classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+  // Mobile menu
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuClose = document.getElementById("menu-close");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle?.addEventListener("click", () => {
+    mobileMenu?.classList.add("open");
+  });
+
+  menuClose?.addEventListener("click", () => {
+    mobileMenu?.classList.remove("open");
+  });
+
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.remove("open");
+    });
+  });
+
+  // Language switcher
+  const langToggle = document.getElementById("lang-toggle");
+  const langDropdown = document.getElementById("lang-dropdown");
+  langToggle?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    langDropdown?.classList.toggle("open");
+  });
+  document.addEventListener("click", () => {
+    langDropdown?.classList.remove("open");
+  });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  reveals.forEach((el) => observer.observe(el));
+
+  // Form handler — reads lang from data attribute
+  const form = document.getElementById("registration-form") as HTMLFormElement;
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const lang = form.dataset.lang || 'id';
+
+    const labels: Record<string, Record<string, string>> = {
+      en: { intro: "Assalamu'alaikum, I would like to register my child:", parent: "Parent name", phone: "WhatsApp", student: "Student name", age: "Age", program: "Program", mode: "Mode", notes: "Notes" },
+      id: { intro: "Assalamu'alaikum, saya ingin mendaftarkan anak saya:", parent: "Nama Ortu", phone: "No. WA", student: "Nama Santri", age: "Usia", program: "Program", mode: "Sistem", notes: "Catatan" },
+      ms: { intro: "Assalamu'alaikum, saya ingin mendaftarkan anak saya:", parent: "Nama Ibu Bapa", phone: "No. WA", student: "Nama Pelajar", age: "Umur", program: "Program", mode: "Sistem", notes: "Catatan" },
+    };
+
+    const l = labels[lang] || labels['id'];
+    const notes = data.get("notes");
+    const message = `${l.intro}\n\n${l.parent}: ${data.get("parentName")}\n${l.phone}: ${data.get("phone")}\n${l.student}: ${data.get("studentName")}\n${l.age}: ${data.get("age")} ${lang === 'en' ? 'years' : 'tahun'}\n${l.program}: ${data.get("program")}\n${l.mode}: ${data.get("attendance")}${notes ? `\n${l.notes}: ${notes}` : ""}`;
+
+    window.open(
+      `https://wa.me/6281779055909?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+  });
+</script>
