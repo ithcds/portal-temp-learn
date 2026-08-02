@@ -10,8 +10,9 @@ interface Props {
 const siteUrl = "https://baitululum-alusmani.com";
 const { title, description, lang = 'en' } = Astro.props;
 
-const ogLocaleMap: Record<Locale, string> = { en: 'en_US', id: 'id_ID', ms: 'ms_MY', ja: 'ja_JP' };
+const ogLocaleMap: Record<Locale, string> = { en: 'en_US', id: 'id_ID', ms: 'ms_MY', ja: 'ja_JP', nl: 'nl_NL', fr: 'fr_FR', ar: 'ar_SA' };
 const canonicalPath = lang === 'en' ? '' : `/${lang}`;
+const dir = lang === 'ar' ? 'rtl' : 'ltr';
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -42,7 +43,7 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={dir}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -54,6 +55,9 @@ const jsonLd = {
     <link rel="alternate" hreflang="id" href={`${siteUrl}/id/`} />
     <link rel="alternate" hreflang="ms" href={`${siteUrl}/ms/`} />
     <link rel="alternate" hreflang="ja" href={`${siteUrl}/ja/`} />
+    <link rel="alternate" hreflang="nl" href={`${siteUrl}/nl/`} />
+    <link rel="alternate" hreflang="fr" href={`${siteUrl}/fr/`} />
+    <link rel="alternate" hreflang="ar" href={`${siteUrl}/ar/`} />
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

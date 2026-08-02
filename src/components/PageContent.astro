@@ -460,11 +460,16 @@ const { lang } = Astro.props;
       id: { intro: "Assalamu'alaikum, saya ingin mendaftarkan anak saya:", parent: "Nama Ortu", phone: "No. WA", student: "Nama Santri", age: "Usia", program: "Program", mode: "Sistem", notes: "Catatan" },
       ms: { intro: "Assalamu'alaikum, saya ingin mendaftarkan anak saya:", parent: "Nama Ibu Bapa", phone: "No. WA", student: "Nama Pelajar", age: "Umur", program: "Program", mode: "Sistem", notes: "Catatan" },
       ja: { intro: "アッサラームアライクム、子どもの入学を希望します：", parent: "保護者名", phone: "WhatsApp", student: "生徒名", age: "年齢", program: "プログラム", mode: "形態", notes: "備考" },
+      nl: { intro: "Assalamu'alaikum, ik wil graag mijn kind inschrijven:", parent: "Naam ouder", phone: "WhatsApp", student: "Naam leerling", age: "Leeftijd", program: "Programma", mode: "Vorm", notes: "Opmerkingen" },
+      fr: { intro: "Assalamu'alaikum, je souhaite inscrire mon enfant :", parent: "Nom du parent", phone: "WhatsApp", student: "Nom de l'élève", age: "Âge", program: "Programme", mode: "Mode", notes: "Notes" },
+      ar: { intro: "السلام عليكم، أرغب في تسجيل طفلي:", parent: "اسم ولي الأمر", phone: "واتساب", student: "اسم الطالب", age: "العمر", program: "البرنامج", mode: "النظام", notes: "ملاحظات" },
     };
 
-    const l = labels[lang] || labels['id'];
+    const l = labels[lang] || labels['en'];
     const notes = data.get("notes");
-    const message = `${l.intro}\n\n${l.parent}: ${data.get("parentName")}\n${l.phone}: ${data.get("phone")}\n${l.student}: ${data.get("studentName")}\n${l.age}: ${data.get("age")} ${lang === 'en' ? 'years' : lang === 'ja' ? '歳' : 'tahun'}\n${l.program}: ${data.get("program")}\n${l.mode}: ${data.get("attendance")}${notes ? `\n${l.notes}: ${notes}` : ""}`;
+    const ageUnits: Record<string, string> = { en: 'years', ja: '歳', nl: 'jaar', fr: 'ans', ar: 'سنة' };
+    const ageUnit = ageUnits[lang] || 'tahun';
+    const message = `${l.intro}\n\n${l.parent}: ${data.get("parentName")}\n${l.phone}: ${data.get("phone")}\n${l.student}: ${data.get("studentName")}\n${l.age}: ${data.get("age")} ${ageUnit}\n${l.program}: ${data.get("program")}\n${l.mode}: ${data.get("attendance")}${notes ? `\n${l.notes}: ${notes}` : ""}`;
 
     window.open(
       `https://wa.me/6281779055909?text=${encodeURIComponent(message)}`,

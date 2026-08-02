@@ -1622,3 +1622,39 @@ footer > p {
     text-align: center;
   }
 }
+
+/* ═══════════════════════════════════════════
+   RTL SUPPORT (Arabic)
+   ═══════════════════════════════════════════ */
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .nav-links,
+[dir="rtl"] .footer-links,
+[dir="rtl"] .footer-bottom {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-content,
+[dir="rtl"] .about-content,
+[dir="rtl"] .admission-intro {
+  text-align: right;
+}
+
+[dir="rtl"] .form-card select,
+[dir="rtl"] .reg-form select {
+  background-position: left 0.8rem center;
+  padding-left: 2.5rem;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .lang-dropdown {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .marquee-track {
+  animation-direction: reverse;
+}

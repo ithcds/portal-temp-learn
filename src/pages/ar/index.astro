@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageContent from "../../components/PageContent.astro";
+import { t } from "../../i18n/translations";
+---
+
+<Layout
+  title={t('ar', 'siteTitle')}
+  description={t('ar', 'siteDescription')}
+  lang="ar"
+>
+  <PageContent lang="ar" />
+</Layout>
